@@ -63,6 +63,7 @@ export class HeaderbarComponent implements OnInit {
   isScrolled = false;
   isCollapsedMobile = 'no-block';
   isCollapsedSideBar = 'no-block';
+  isPageSideBar = '';
   toggleOn = true;
   windowWidth: number;
   @ViewChild('searchFriends') search_friends: ElementRef;
@@ -136,6 +137,10 @@ export class HeaderbarComponent implements OnInit {
 
   onMobileMenu() {
     this.isCollapsedMobile = this.isCollapsedMobile === 'yes-block' ? 'no-block' : 'yes-block';
+  }
+
+  addClassFunction() {
+    this.isPageSideBar = this.isPageSideBar === 'pcoded-trigger' ? '' : 'pcoded-trigger';
   }
 
 }

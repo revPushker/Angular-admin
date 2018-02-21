@@ -20,6 +20,7 @@ import { MenuItems } from './shared/menu-items/menu-items';
 import { DashboardRoutes } from './layouts/dashboard/dashboard.routing';
 import { ProfileComponent } from './user/profile/profile.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ContactComponent } from './pages/contact/contact.component';
 
 
 const appRoutes: Routes = [
@@ -40,6 +41,7 @@ const appRoutes: Routes = [
     HeaderbarComponent,
     DashboardComponent,
     ProfileComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

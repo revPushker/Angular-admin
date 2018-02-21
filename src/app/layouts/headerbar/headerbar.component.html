@@ -263,87 +263,87 @@
 
     <!-- rightbar chat start -->
     <div [@slideInOut]="chatToggle" id="sidebar" class="users p-chat-user">
-        <div class="had-container">
-          <div class="card card_main p-fixed users-main">
-            <div class="user-box">
-              <div class="card-body">
-                <div class="right-icon-control">
-                  <input type="text" class="form-control search-text" placeholder="Search Friend" id="search-friends" #searchFriends (keyup)="searchFriendList($event)">
-                  <div class="form-icon">
-                    <i class="icofont icofont-search"></i>
-                  </div>
+      <div class="had-container">
+        <div class="card card_main p-fixed users-main">
+          <div class="user-box">
+            <div class="card-body">
+              <div class="right-icon-control">
+                <input type="text" class="form-control search-text" placeholder="Search Friend" id="search-friends" #searchFriends (keyup)="searchFriendList($event)">
+                <div class="form-icon">
+                  <i class="icofont icofont-search"></i>
                 </div>
-
               </div>
-                <div slimScroll class="main-friend-list scroll-window" width="100%" height="100%" size="7px" color="rgb(27, 139, 249)" opacity="0.4">
-                  <div (click)="toggleChatInner()" class="media userlist-box" data-id="1" data-status="online" data-username="Josephin Doe" data-toggle="tooltip" data-placement="left" title="Josephin Doe">
-                    <a class="media-left" href="javascript:;">
-                      <img class="media-object img-circle" src="assets/images/avatar-1.png" alt="Generic placeholder image">
-                      <div class="live-status bg-success"></div>
-                    </a>
-                    <div class="media-body">
-                      <div class="f-13 chat-header">Josephin Doe</div>
-                    </div>
-                  </div>
-                  <div (click)="toggleChatInner()" class="media userlist-box" data-id="2" data-status="online" data-username="Lary Doe" data-toggle="tooltip" data-placement="left" title="Lary Doe">
-                    <a class="media-left" href="javascript:;">
-                      <img class="media-object img-circle" src="assets/images/task/task-u1.jpg" alt="Generic placeholder image">
-                      <div class="live-status bg-success"></div>
-                    </a>
-                    <div class="media-body">
-                      <div class="f-13 chat-header">Lary Doe</div>
-                    </div>
-                  </div>
-                  <div (click)="toggleChatInner()" class="media userlist-box" data-id="3" data-status="online" data-username="Alice" data-toggle="tooltip" data-placement="left" title="Alice">
-                    <a class="media-left" href="javascript:;">
-                      <img class="media-object img-circle" src="assets/images/avatar-2.png" alt="Generic placeholder image">
-                      <div class="live-status bg-success"></div>
-                    </a>
-                    <div class="media-body">
-                      <div class="f-13 chat-header">Alice</div>
-                    </div>
-                  </div>
-                  <div (click)="toggleChatInner()" class="media userlist-box" data-id="4" data-status="online" data-username="Alia" data-toggle="tooltip" data-placement="left" title="Alia">
-                    <a class="media-left" href="javascript:;">
-                      <img class="media-object img-circle" src="assets/images/task/task-u2.jpg" alt="Generic placeholder image">
-                      <div class="live-status bg-success"></div>
-                    </a>
-                    <div class="media-body">
-                      <div class="f-13 chat-header">Alia</div>
-                    </div>
-                  </div>
-                  <div (click)="toggleChatInner()" class="media userlist-box" data-id="5" data-status="online" data-username="Suzen" data-toggle="tooltip" data-placement="left" title="Suzen">
-                    <a class="media-left" href="javascript:;">
-                      <img class="media-object img-circle" src="assets/images/task/task-u3.jpg" alt="Generic placeholder image">
-                      <div class="live-status bg-success"></div>
-                    </a>
-                    <div class="media-body">
-                      <div class="f-13 chat-header">Suzen</div>
-                    </div>
-                  </div>
-                  <div (click)="toggleChatInner()" class="media userlist-box" data-id="6" data-status="offline" data-username="Michael Scofield" data-toggle="tooltip" data-placement="left" title="Michael Scofield">
-                    <a class="media-left" href="javascript:;">
-                      <img class="media-object img-circle" src="assets/images/avatar-3.png" alt="Generic placeholder image">
-                      <div class="live-status bg-danger"></div>
-                    </a>
-                    <div class="media-body">
-                      <div class="f-13 chat-header">Michael Scofield</div>
-                    </div>
-                  </div>
-                  <div (click)="toggleChatInner()" class="media userlist-box" data-id="7" data-status="online" data-username="Irina Shayk" data-toggle="tooltip" data-placement="left" title="Irina Shayk">
-                    <a class="media-left" href="javascript:;">
-                      <img class="media-object img-circle" src="assets/images/avatar-4.png" alt="Generic placeholder image">
-                      <div class="live-status bg-success"></div>
-                    </a>
-                    <div class="media-body">
-                      <div class="f-13 chat-header">Irina Shayk</div>
-                    </div>
-                  </div>
+
+            </div>
+            <div slimScroll class="main-friend-list scroll-window" width="100%" height="100%" size="7px" color="rgb(27, 139, 249)" opacity="0.4">
+              <div (click)="toggleChatInner()" class="media userlist-box" data-id="1" data-status="online" data-username="Josephin Doe" data-toggle="tooltip" data-placement="left" title="Josephin Doe">
+                <a class="media-left" href="javascript:;">
+                  <img class="media-object img-circle" src="assets/images/avatar-1.png" alt="Generic placeholder image">
+                  <div class="live-status bg-success"></div>
+                </a>
+                <div class="media-body">
+                  <div class="f-13 chat-header">Josephin Doe</div>
                 </div>
+              </div>
+              <div (click)="toggleChatInner()" class="media userlist-box" data-id="2" data-status="online" data-username="Lary Doe" data-toggle="tooltip" data-placement="left" title="Lary Doe">
+                <a class="media-left" href="javascript:;">
+                  <img class="media-object img-circle" src="assets/images/task/task-u1.jpg" alt="Generic placeholder image">
+                  <div class="live-status bg-success"></div>
+                </a>
+                <div class="media-body">
+                  <div class="f-13 chat-header">Lary Doe</div>
+                </div>
+              </div>
+              <div (click)="toggleChatInner()" class="media userlist-box" data-id="3" data-status="online" data-username="Alice" data-toggle="tooltip" data-placement="left" title="Alice">
+                <a class="media-left" href="javascript:;">
+                  <img class="media-object img-circle" src="assets/images/avatar-2.png" alt="Generic placeholder image">
+                  <div class="live-status bg-success"></div>
+                </a>
+                <div class="media-body">
+                  <div class="f-13 chat-header">Alice</div>
+                </div>
+              </div>
+              <div (click)="toggleChatInner()" class="media userlist-box" data-id="4" data-status="online" data-username="Alia" data-toggle="tooltip" data-placement="left" title="Alia">
+                <a class="media-left" href="javascript:;">
+                  <img class="media-object img-circle" src="assets/images/task/task-u2.jpg" alt="Generic placeholder image">
+                  <div class="live-status bg-success"></div>
+                </a>
+                <div class="media-body">
+                  <div class="f-13 chat-header">Alia</div>
+                </div>
+              </div>
+              <div (click)="toggleChatInner()" class="media userlist-box" data-id="5" data-status="online" data-username="Suzen" data-toggle="tooltip" data-placement="left" title="Suzen">
+                <a class="media-left" href="javascript:;">
+                  <img class="media-object img-circle" src="assets/images/task/task-u3.jpg" alt="Generic placeholder image">
+                  <div class="live-status bg-success"></div>
+                </a>
+                <div class="media-body">
+                  <div class="f-13 chat-header">Suzen</div>
+                </div>
+              </div>
+              <div (click)="toggleChatInner()" class="media userlist-box" data-id="6" data-status="offline" data-username="Michael Scofield" data-toggle="tooltip" data-placement="left" title="Michael Scofield">
+                <a class="media-left" href="javascript:;">
+                  <img class="media-object img-circle" src="assets/images/avatar-3.png" alt="Generic placeholder image">
+                  <div class="live-status bg-danger"></div>
+                </a>
+                <div class="media-body">
+                  <div class="f-13 chat-header">Michael Scofield</div>
+                </div>
+              </div>
+              <div (click)="toggleChatInner()" class="media userlist-box" data-id="7" data-status="online" data-username="Irina Shayk" data-toggle="tooltip" data-placement="left" title="Irina Shayk">
+                <a class="media-left" href="javascript:;">
+                  <img class="media-object img-circle" src="assets/images/avatar-4.png" alt="Generic placeholder image">
+                  <div class="live-status bg-success"></div>
+                </a>
+                <div class="media-body">
+                  <div class="f-13 chat-header">Irina Shayk</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
     <!-- rightbar inner chat start-->
     <div [@slideOnOff]="chatInnerToggle" class="card card_main showChat_inner">
       <div class="media chat-inner-header">
@@ -411,64 +411,51 @@
               </div>
             </div>
             <div>
-            <div>
-             <ul class="pcoded-item pcoded-left-item" item-border="none" item-border-style="solid" subitem-border="solid"  appAccordionLink >
-                <!--<li [routerLinkActive]="['active']" *ngIf="asideItem.type === 'external'" appAccordionLink >
-                  <a href="{{asideItem.external}}" target="{{asideItem.target ? '_blank' : '_self'}}" appAccordionToggle>
-                    <span class="pcoded-micon"><i class="{{ asideItem.icon }}"></i></span>
-                    <span class="pcoded-mtext">{{ asideItem.name }}</span>
-                    <span *ngFor="let asideBadge of asideItem.badge" class="pcoded-badge label label-{{ asideBadge.type }}">{{asideBadge.value}}</span>
-                    <span class="pcoded-mcaret"></span>
-                  </a>
-                </li> -->
-<!--<li [routerLinkActive]="['active']" *ngIf="asideItem.type === 'link'" appAccordionLink >
-                  <a [routerLink]="['/', asideItem.main_state, asideItem.state]" target="{{asideItem.target ? '_blank' : '_self'}}" appAccordionToggle *ngIf="asideItem.main_state; else: mainContent">
-                    <span class="pcoded-micon"><i class="{{ asideItem.icon }}"></i></span>
-                    <span class="pcoded-mtext">{{ asideItem.name }}</span>
-                    <span *ngFor="let asideBadge of asideItem.badge" class="pcoded-badge label label-{{ asideBadge.type }}">{{asideBadge.value}}</span>
-                    <span class="pcoded-mcaret"></span>
-                  </a>
-                  <ng-template #mainContent>
-                    <a [routerLink]="['/', asideItem.state]" target="{{asideItem.target ? '_blank' : '_self'}}" appAccordionToggle>
-                      <span class="pcoded-micon"><i class="{{ asideItem.icon }}"></i></span>
-                      <span class="pcoded-mtext">{{ asideItem.name }}</span>
-                      <span *ngFor="let asideBadge of asideItem.badge" class="pcoded-badge label label-{{ asideBadge.type }}">{{asideBadge.value}}</span>
+              <div>
+               <ul class="pcoded-item pcoded-left-item" item-border="none" item-border-style="solid" subitem-border="solid"  appAccordionLink >
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:
+                true}"  class="pcoded-hasmenu" dropdown-icon="style3" subitem-icon="style6" appAccordionLink>
+                <a [routerLinkActive]="['active']" href="javascript:;" routerLink="/dashboard" appAccordionToggle>
+                  <span class="pcoded-micon"><i class="ti-home"></i></span>
+                  <span class="pcoded-mtext">{{ 'Dashboard' }}</span>
+                  <span class="pcoded-mcaret"></span>
+                </a>
+              </li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" class="pcoded-hasmenu" [ngClass]="isPageSideBar" dropdown-icon="style3" subitem-icon="style6" appAccordionLink>
+                <a [routerLinkActive]="['active']" href="javascript:;" (click)="addClassFunction()" appAccordionToggle>
+                  <span class="pcoded-micon"><i class="ti-layout-sidebar-left"></i></span>
+                  <span class="pcoded-mtext">{{ 'Pages' }}</span>
+                  <span class="pcoded-mcaret"></span>
+                </a>
+                <ul class="pcoded-submenu"  dropdown-icon="style3" subitem-icon="style6" appAccordionLink>
+                  <li [routerLinkActive]="['active']" routerLink="/dashboard/contact" [routerLinkActiveOptions]="{exact:true}" >
+                    <a>
+                      <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                      <span class="pcoded-mtext">{{ "Contact Page" }}</span>
+
                       <span class="pcoded-mcaret"></span>
                     </a>
-                  </ng-template>
-                </li>-->
-				  <!--<li [routerLinkActive]="['active']" *ngIf="asideItem.type === 'sub'" class="pcoded-hasmenu" dropdown-icon="style3" subitem-icon="style6" appAccordionLink >
-                  <a [routerLinkActive]="['active']" href="javascript:;" appAccordionToggle>
-                    <span class="pcoded-micon"><i class="{{ asideItem.icon }}"></i></span>
-                    <span class="pcoded-mtext">{{ asideItem.name }}</span>
-                    <span *ngFor="let asideBadge of asideItem.badge" class="pcoded-badge label label-{{ asideBadge.type }}">{{asideBadge.value}}</span>
-                    <span class="pcoded-mcaret"></span>
-                  </a>
-				      </li> -->
-              <li [routerLinkActive]="['active']" class="pcoded-hasmenu" dropdown-icon="style3" subitem-icon="style6" appAccordionLink>
-              <a [routerLinkActive]="['active']" href="javascript:;" appAccordionToggle>
-                    <span class="pcoded-micon"><i class="ti-home"></i></span>
-                    <span class="pcoded-mtext">{{ 'Dashboard' }}</span>
-                    <span class="pcoded-mcaret"></span>
-                  </a>
-              </li>
+                  </li>
                 </ul>
-           </div>
-            </div>
+              </li>
+
+            </ul>
           </div>
-        </nav>
-          <div class="pcoded-content">
-          <div class="pcoded-inner-content">
-            <div class="main-body">
-              <div class="page-wrapper">
-                <div class="page-body">
-                  <router-outlet><app-spinner></app-spinner></router-outlet>
-                </div>
-              </div>
+        </div>
+      </div>
+    </nav>
+    <div class="pcoded-content">
+      <div class="pcoded-inner-content">
+        <div class="main-body">
+          <div class="page-wrapper">
+            <div class="page-body">
+              <router-outlet><app-spinner></app-spinner></router-outlet>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+</div>
 </div>

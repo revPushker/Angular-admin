@@ -41,19 +41,13 @@ export class ProfileComponent implements OnInit {
       //     .subscribe((data) => {
       //         this.data = data.json();
       //     });
-      this.minDate = { year: 1985, month: 4, day: 5} ;
+      this.minDate = { year: 1979, month: 4, day: 5} ;
   }
 
   toggleEditProfile() {
     this.editProfileIcon = (this.editProfileIcon === 'icofont-close') ? 'icofont-edit' : 'icofont-close';
     this.editProfile = !this.editProfile;
   }
-
-  toggleEditAbout() {
-      this.editAboutIcon = (this.editAboutIcon === 'icofont-close') ? 'icofont-edit' : 'icofont-close';
-      this.editAbout = !this.editAbout;
-  }
-
   onSubmit() {
     console.log(this.profileViewForm.value.birth_date);
     const ngbDate = this.profileViewForm.value.birth_date;
