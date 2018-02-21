@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 
@@ -43,17 +43,18 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
     RouterModule.forChild(DashboardRoutes),
-    FormsModule,
     HttpModule,
     BrowserAnimationsModule,
   ],
-  providers: [AuthGuard,MenuItems,SharedModule],
+  providers: [AuthGuard, MenuItems, SharedModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

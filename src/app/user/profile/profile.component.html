@@ -123,42 +123,40 @@
                         <div class="general-info">
                           <div class="row">
                             <div class="col-lg-6">
+                            <form [formGroup]="profileViewForm" (ngSubmit)="onSubmit()" novalidate  submitted>
                               <table class="table">
                                 <tbody>
                                 <tr>
                                   <td>
                                     <div class="input-group">
                                       <span class="input-group-addon"><i class="icofont icofont-user"></i></span>
-                                      <input type="text" class="form-control" placeholder="Full Name" value="Josephine Villa">
+                                      <input type="text" formControlName="fullname" class="form-control" name="fullname" placeholder="Full Name" value="Josephine Villa">
                                     </div>
                                   </td>
                                 </tr>
                                 <tr>
                                   <td>
-                                    <div class="form-radio">
-                                      <div class="group-add-on">
-                                        <div class="radio radiofill radio-inline">
-                                          <label>
-                                            <input type="radio" name="radio"><i class="helper"></i> Male
-                                          </label>
-                                        </div>
-                                        <div class="radio radiofill radio-inline">
-                                          <label>
-                                            <input type="radio" name="radio" checked><i class="helper"></i> Female
-                                          </label>
-                                        </div>
-                                      </div>
+                                    <div class="input-group">
+                                      <span class="input-group-addon"><i class="icofont icofont-user"></i></span>
+                                      <input type="email" formControlName="email" class="form-control" name="email" placeholder="E-Mail" value="">
                                     </div>
                                   </td>
                                 </tr>
                                 <tr>
                                   <td>
-                                    <input id="dropper-default" class="form-control" type="text" value="October 25th, 1990" placeholder="Select Your Birth Date" />
+                                  <div class="input-group">
+                                    <!--<input id="dropper-default"  formControlName="birth_date" class="form-control" type="date" value="October 25th, 1990" placeholder="Select Your Birth Date" /> -->
+                                     <input class="form-control" placeholder="yyyy-mm-dd" formControlName="birth_date" name="dp" [(ngModel)]="modelPopup" [minDate]="minDate" ngbDatepicker #d="ngbDatepicker">
+                                    <div class="input-group-addon bg-default" (click)="d.toggle()" >
+                                    <span class="icofont icofont-ui-calendar"></span>
+                                  </div>
+                                  </div>
+                                 <!-- <pre>Selected Date: {{ parserFormatter.format(modelPopup) }}</pre> -->
                                   </td>
                                 </tr>
                                 <tr>
                                   <td>
-                                    <select id="hello-single" class="form-control">
+                                    <select id="hello-single" formControlName="martial_status" class="form-control">
                                       <option value="">---- Marital Status ----</option>
                                       <option value="married">Married</option>
                                       <option value="single" selected>Single</option>
@@ -170,22 +168,15 @@
                                   <td>
                                     <div class="input-group">
                                       <span class="input-group-addon"><i class="icofont icofont-location-pin"></i></span>
-                                      <input type="text" class="form-control" placeholder="Address" value="New York, USA">
+                                      <input type="text" formControlName="address" class="form-control" placeholder="Address" value="New York, USA">
                                     </div>
                                   </td>
                                 </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                            <!-- end of table col-lg-6 -->
-                            <div class="col-lg-6">
-                              <table class="table">
-                                <tbody>
-                                <tr>
+                                    <tr>
                                   <td>
                                     <div class="input-group">
                                       <span class="input-group-addon"><i class="icofont icofont-mobile-phone"></i></span>
-                                      <input type="text" class="form-control" value="(0123) - 4567891" placeholder="Mobile Number">
+                                      <input type="text" formControlName="mobile_number" class="form-control" value="(0123) - 4567891" placeholder="Mobile Number">
                                     </div>
                                   </td>
                                 </tr>
@@ -193,7 +184,7 @@
                                   <td>
                                     <div class="input-group">
                                       <span class="input-group-addon"><i class="icofont icofont-social-twitter"></i></span>
-                                      <input type="text" class="form-control" value="@codedthemes" placeholder="Twitter Id">
+                                      <input type="text" formControlName="twitter" class="form-control" value="@codedthemes" placeholder="Twitter Id">
                                     </div>
                                   </td>
                                 </tr>
@@ -201,7 +192,7 @@
                                   <td>
                                     <div class="input-group">
                                       <span class="input-group-addon"><i class="icofont icofont-social-skype"></i></span>
-                                      <input type="email" class="form-control" value="codedthemes.demo" placeholder="Skype Id">
+                                      <input type="email" formControlName="skype" class="form-control" value="codedthemes.demo" placeholder="Skype Id">
                                     </div>
                                   </td>
                                 </tr>
@@ -209,20 +200,21 @@
                                   <td>
                                     <div class="input-group">
                                       <span class="input-group-addon"><i class="icofont icofont-earth"></i></span>
-                                      <input type="text" class="form-control" value="www.demo.com" placeholder="website">
+                                      <input type="text" formControlName="site_url" class="form-control" value="www.demo.com" placeholder="website">
                                     </div>
                                   </td>
                                 </tr>
                                 </tbody>
                               </table>
-                            </div>
-                            <!-- end of table col-lg-6 -->
-                          </div>
-                          <!-- end of row -->
-                          <div class="text-center">
-                            <a href="javascript:;" class="btn btn-primary waves-effect waves-light m-r-20">Save</a>
+                            <div class="text-center">
+                            <input type="submit" class="btn btn-primary waves-effect waves-light m-r-20" value="Save">
                             <a href="javascript:;" id="edit-cancel" class="btn btn-default waves-effect" (click)="toggleEditProfile()">Cancel</a>
                           </div>
+                              </form>
+                            </div>
+                          </div>
+                          <!-- end of row -->
+
                         </div>
                         <!-- end of edit info -->
                       </div>
