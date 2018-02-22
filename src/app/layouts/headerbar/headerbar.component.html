@@ -414,7 +414,7 @@
               <div>
                <ul class="pcoded-item pcoded-left-item" item-border="none" item-border-style="solid" subitem-border="solid"  appAccordionLink >
                 <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:
-                true}"  class="pcoded-hasmenu" dropdown-icon="style3" subitem-icon="style6" appAccordionLink>
+                true}"  class="pcoded-hasmenu"  subitem-icon="style6" appAccordionLink>
                 <a [routerLinkActive]="['active']" href="javascript:;" routerLink="/dashboard" appAccordionToggle>
                   <span class="pcoded-micon"><i class="ti-home"></i></span>
                   <span class="pcoded-mtext">{{ 'Dashboard' }}</span>
@@ -432,11 +432,34 @@
                     <a>
                       <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                       <span class="pcoded-mtext">{{ "Contact Page" }}</span>
-
                       <span class="pcoded-mcaret"></span>
                     </a>
                   </li>
                 </ul>
+              </li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:
+                true}"  class="pcoded-hasmenu"  subitem-icon="style6" appAccordionLink>
+                <a [routerLinkActive]="['active']" href="javascript:;" routerLink="/dashboard/conatctlist" appAccordionToggle>
+                  <span class="pcoded-micon"><i class="ti-receipt"></i></span>
+                  <span class="pcoded-mtext">{{ 'Contact List' }}</span>
+                  <span class="pcoded-mcaret"></span>
+                </a>
+              </li>
+               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:
+                true}"  class="pcoded-hasmenu"  subitem-icon="style6" appAccordionLink>
+                <a [routerLinkActive]="['active']" href="javascript:;" routerLink="/dashboard/subscribers" appAccordionToggle>
+                  <span class="pcoded-micon"><i class="ti-receipt"></i></span>
+                  <span class="pcoded-mtext">{{ 'subscribers' }}</span>
+                  <span class="pcoded-mcaret"></span>
+                </a>
+              </li>
+               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:
+                true}"  class="pcoded-hasmenu"  subitem-icon="style6" appAccordionLink>
+                <a [routerLinkActive]="['active']" href="javascript:;" routerLink="/dashboard/social-icons" appAccordionToggle>
+                  <span class="pcoded-micon"><i class="icofont icofont-ui-social-link"></i></span>
+                  <span class="pcoded-mtext">{{ 'Footer Icons' }}</span>
+                  <span class="pcoded-mcaret"></span>
+                </a>
               </li>
 
             </ul>
