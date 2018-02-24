@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataTablesModule, DataTableDirective } from 'angular-datatables';
 import { Subject } from 'rxjs/Subject';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-get-token',
@@ -8,15 +8,19 @@ import { Subject } from 'rxjs/Subject';
   styleUrls: ['./get-token.component.css']
 })
 export class GetTokenComponent implements OnInit {
-
-  dtOptions: DataTables.Settings = {};
-
-  constructor() { }
+  public data: any;
+  public rowsOnPage: Number = 10;
+  public filterQuery: String = '';
+  public sortBy: String = '';
+  public sortOrder: String = 'desc';
+  constructor(public http: Http) { }
 
   ngOnInit() {
-    this.dtOptions = {
-      pagingType: 'full_numbers'
-    };
+    this.http.get(`assets/data/crm-contact.json`)
+    .subscribe((data) => {
+      this.data = data.json();
+      console.log(this.data);
+    });
   }
 
 }

@@ -26,8 +26,8 @@ import { SocialIconsComponent } from './pages/social-icons/social-icons.componen
 import { GivebackComponent } from './pages/giveback/giveback.component';
 import { HomeContentComponent } from './pages/home-content/home-content.component';
 import { AlertModule } from 'ngx-alerts';
-import { DataTablesModule } from 'angular-datatables';
 import { GetTokenComponent } from './pages/get-token/get-token.component';
+import { FilterPipe } from './customPipes/email-filter.pipe';
 
 
 const appRoutes: Routes = [
@@ -54,6 +54,7 @@ const appRoutes: Routes = [
     GivebackComponent,
     HomeContentComponent,
     GetTokenComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -66,12 +67,11 @@ const appRoutes: Routes = [
       { enableTracing: false } // <-- debugging purposes only
     ),
     AlertModule.forRoot(),
-    DataTablesModule,
     RouterModule.forChild(DashboardRoutes),
     HttpModule,
     BrowserAnimationsModule,
   ],
-  exports: [ScrollModule],
+  exports: [ScrollModule, FilterPipe],
   providers: [AuthGuard, MenuItems],
   bootstrap: [AppComponent]
 })
