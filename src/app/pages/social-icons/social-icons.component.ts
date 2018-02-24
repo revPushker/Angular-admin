@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validators  } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { CustomValidators } from '../../CustomValidators';
 
 @Component({
   selector: 'app-social-icons',
@@ -12,14 +13,14 @@ export class SocialIconsComponent implements OnInit {
   submitted = false;
   constructor(private fb: FormBuilder) {
     this.myForm = this.fb.group({
-      'fbLink': ['', Validators.required],
-      'twitterLink': ['', Validators.required],
-      'teleLink': ['', Validators.required],
-      'linkedinLink': ['', Validators.required],
-      'instaLink': ['', Validators.required],
-      'redditLink': ['', Validators.required],
-      'youtubeLink': ['', Validators.required],
-      'bitLink': ['', Validators.required],
+      'fbLink': ['', [Validators.required, CustomValidators.ValidateUrl]],
+      'twitterLink': ['', [Validators.required, CustomValidators.ValidateUrl]],
+      'teleLink': ['', [Validators.required, CustomValidators.ValidateUrl]],
+      'linkedinLink': ['', [Validators.required, CustomValidators.ValidateUrl]],
+      'instaLink': ['', [Validators.required, CustomValidators.ValidateUrl]],
+      'redditLink': ['', [Validators.required, CustomValidators.ValidateUrl]],
+      'youtubeLink': ['', [Validators.required, CustomValidators.ValidateUrl]],
+      'bitLink': ['', [Validators.required, CustomValidators.ValidateUrl]],
     });
    }
 

@@ -421,6 +421,14 @@
                   <span class="pcoded-mcaret"></span>
                 </a>
               </li>
+               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:
+                true}"  class="pcoded-hasmenu"  subitem-icon="style6" appAccordionLink>
+                <a [routerLinkActive]="['active']" href="javascript:;" routerLink="/dashboard/tokenUsers" appAccordionToggle>
+                  <span class="pcoded-micon"><i class="fa fas fa-users"></i></span>
+                  <span class="pcoded-mtext">{{ 'Get Token' }}</span>
+                  <span class="pcoded-mcaret"></span>
+                </a>
+              </li>
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" class="pcoded-hasmenu" [ngClass]="isPageSideBar" dropdown-icon="style3" subitem-icon="style6" appAccordionLink>
                 <a [routerLinkActive]="['active']" href="javascript:;" (click)="addClassFunction()" appAccordionToggle>
                   <span class="pcoded-micon"><i class="ti-layout-sidebar-left"></i></span>
@@ -432,6 +440,13 @@
                     <a>
                       <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                       <span class="pcoded-mtext">{{ "Contact Page" }}</span>
+                      <span class="pcoded-mcaret"></span>
+                    </a>
+                  </li>
+                   <li [routerLinkActive]="['active']" routerLink="/dashboard/homeContent" [routerLinkActiveOptions]="{exact:true}" >
+                    <a>
+                      <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                      <span class="pcoded-mtext">{{ "Home Content" }}</span>
                       <span class="pcoded-mcaret"></span>
                     </a>
                   </li>
@@ -461,7 +476,14 @@
                   <span class="pcoded-mcaret"></span>
                 </a>
               </li>
-
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:
+                true}"  class="pcoded-hasmenu"  subitem-icon="style6" appAccordionLink>
+                <a [routerLinkActive]="['active']" href="javascript:;" routerLink="/dashboard/giveBack" appAccordionToggle>
+                  <span class="pcoded-micon"><i class="icofont icofont-back-pack"></i></span>
+                  <span class="pcoded-mtext">{{ 'Give Back' }}</span>
+                  <span class="pcoded-mcaret"></span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>

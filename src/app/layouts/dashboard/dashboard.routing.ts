@@ -8,6 +8,9 @@ import { ContactComponent } from '../../pages/contact/contact.component';
 import { ContactListComponent } from '../../pages/contact-list/contact-list.component';
 import { SubscribersComponent } from '../../pages/subscribers/subscribers.component';
 import { SocialIconsComponent } from '../../pages/social-icons/social-icons.component';
+import { GivebackComponent } from '../../pages/giveback/giveback.component';
+import { HomeContentComponent } from '../../pages/home-content/home-content.component';
+import { GetTokenComponent } from '../../pages/get-token/get-token.component';
 
 export const DashboardRoutes: Route[] = [
   {
@@ -18,7 +21,10 @@ export const DashboardRoutes: Route[] = [
         { path: 'contact', component: ContactComponent, canActivate: [AuthGuard] },
         { path: 'conatctlist', component: ContactListComponent, canActivate: [AuthGuard] },
         { path: 'subscribers', component: SubscribersComponent, canActivate: [AuthGuard] },
-        { path: 'social-icons', component: SocialIconsComponent, canActivate:[AuthGuard] },
+        { path: 'social-icons', component: SocialIconsComponent, canActivate: [AuthGuard] },
+        { path: 'giveBack', component: GivebackComponent, canActivate: [AuthGuard] },
+        { path: 'homeContent', component: HomeContentComponent, canActivate: [AuthGuard] },
+        { path: 'tokenUsers', component: GetTokenComponent, canActivate: [AuthGuard]}
       ]
   }
 ];

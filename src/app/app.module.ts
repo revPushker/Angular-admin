@@ -23,6 +23,11 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ContactListComponent } from './pages/contact-list/contact-list.component';
 import { SubscribersComponent } from './pages/subscribers/subscribers.component';
 import { SocialIconsComponent } from './pages/social-icons/social-icons.component';
+import { GivebackComponent } from './pages/giveback/giveback.component';
+import { HomeContentComponent } from './pages/home-content/home-content.component';
+import { AlertModule } from 'ngx-alerts';
+import { DataTablesModule } from 'angular-datatables';
+import { GetTokenComponent } from './pages/get-token/get-token.component';
 
 
 const appRoutes: Routes = [
@@ -46,6 +51,9 @@ const appRoutes: Routes = [
     ContactListComponent,
     SubscribersComponent,
     SocialIconsComponent,
+    GivebackComponent,
+    HomeContentComponent,
+    GetTokenComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,6 +65,8 @@ const appRoutes: Routes = [
       appRoutes,
       { enableTracing: false } // <-- debugging purposes only
     ),
+    AlertModule.forRoot(),
+    DataTablesModule,
     RouterModule.forChild(DashboardRoutes),
     HttpModule,
     BrowserAnimationsModule,
