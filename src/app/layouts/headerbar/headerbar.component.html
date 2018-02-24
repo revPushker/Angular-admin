@@ -429,6 +429,14 @@
                   <span class="pcoded-mcaret"></span>
                 </a>
               </li>
+               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:
+                true}"  class="pcoded-hasmenu"  subitem-icon="style6" appAccordionLink>
+                <a [routerLinkActive]="['active']" href="javascript:;" routerLink="/dashboard/cardUsers" appAccordionToggle>
+                  <span class="pcoded-micon"><i class="fa fa-credit-card" aria-hidden="true"></i></span>
+                  <span class="pcoded-mtext">{{ 'Card Redeem' }}</span>
+                  <span class="pcoded-mcaret"></span>
+                </a>
+              </li>
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" class="pcoded-hasmenu" [ngClass]="isPageSideBar" dropdown-icon="style3" subitem-icon="style6" appAccordionLink>
                 <a [routerLinkActive]="['active']" href="javascript:;" (click)="addClassFunction()" appAccordionToggle>
                   <span class="pcoded-micon"><i class="ti-layout-sidebar-left"></i></span>

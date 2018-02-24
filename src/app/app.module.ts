@@ -28,6 +28,7 @@ import { HomeContentComponent } from './pages/home-content/home-content.componen
 import { AlertModule } from 'ngx-alerts';
 import { GetTokenComponent } from './pages/get-token/get-token.component';
 import { FilterPipe } from './customPipes/email-filter.pipe';
+import { CardslistComponent } from './pages/cardslist/cardslist.component';
 
 
 const appRoutes: Routes = [
@@ -54,7 +55,8 @@ const appRoutes: Routes = [
     GivebackComponent,
     HomeContentComponent,
     GetTokenComponent,
-    FilterPipe
+    FilterPipe,
+    CardslistComponent
   ],
   imports: [
     BrowserModule,

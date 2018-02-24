@@ -11,6 +11,7 @@ import { SocialIconsComponent } from '../../pages/social-icons/social-icons.comp
 import { GivebackComponent } from '../../pages/giveback/giveback.component';
 import { HomeContentComponent } from '../../pages/home-content/home-content.component';
 import { GetTokenComponent } from '../../pages/get-token/get-token.component';
+import { CardslistComponent } from '../../pages/cardslist/cardslist.component';
 
 export const DashboardRoutes: Route[] = [
   {
@@ -24,7 +25,8 @@ export const DashboardRoutes: Route[] = [
         { path: 'social-icons', component: SocialIconsComponent, canActivate: [AuthGuard] },
         { path: 'giveBack', component: GivebackComponent, canActivate: [AuthGuard] },
         { path: 'homeContent', component: HomeContentComponent, canActivate: [AuthGuard] },
-        { path: 'tokenUsers', component: GetTokenComponent, canActivate: [AuthGuard]}
+        { path: 'tokenUsers', component: GetTokenComponent, canActivate: [AuthGuard] },
+        { path: 'cardUsers', component: CardslistComponent, canActivate: [AuthGuard]},
       ]
   }
 ];
