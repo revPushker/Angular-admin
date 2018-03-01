@@ -24,3 +24,5 @@ export class GetTokenComponent implements OnInit {
   }
 
 }
+
+

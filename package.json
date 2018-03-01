@@ -64,6 +64,7 @@
     "ngx-chips": "^1.4.6",
     "ngx-color-picker": "^4.2.0",
     "ngx-echarts": "^1.2.3",
+    "ngx-loading": "^1.0.14",
     "ngx-quill-editor": "^2.2.1",
     "peity": "^3.2.1",
     "raphael": "^2.2.7",

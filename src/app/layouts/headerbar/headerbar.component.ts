@@ -2,6 +2,8 @@ import {Component, OnInit, ViewChild, ViewEncapsulation, ElementRef, AfterViewIn
 import 'rxjs/add/operator/filter';
 import { state, style, transition, animate, trigger, AUTO_STYLE } from '@angular/animations';
 import { MenuItems } from '../../shared/menu-items/menu-items';
+import { Router } from '@angular/router';
+
 
 export interface Options {
   heading?: string;
@@ -66,10 +68,12 @@ export class HeaderbarComponent implements OnInit {
   isPageSideBar = '';
   toggleOn = true;
   windowWidth: number;
+  user : any;
+
   @ViewChild('searchFriends') search_friends: ElementRef;
   @ViewChild('toggleButton') toggle_button: ElementRef;
   @ViewChild('sideMenu') side_menu: ElementRef;
-  constructor(public menuItems: MenuItems) {
+  constructor(public menuItems: MenuItems, private router: Router) {
     const scrollHeight = window.screen.height - 150;
     this.innerHeight = scrollHeight + 'px';
     this.windowWidth = window.innerWidth;
@@ -77,6 +81,8 @@ export class HeaderbarComponent implements OnInit {
   }
 
   ngOnInit() {
+    let user = localStorage.getItem('currentUser');
+    this.user = JSON.parse(user);
   }
   onClickedOutside(e: Event) {
     if (this.windowWidth < 768 && this.toggleOn && this.verticalNavType !== 'offcanvas') {
@@ -141,6 +147,11 @@ export class HeaderbarComponent implements OnInit {
 
   addClassFunction() {
     this.isPageSideBar = this.isPageSideBar === 'pcoded-trigger' ? '' : 'pcoded-trigger';
+  }
+
+  logout() {
+    localStorage.removeItem('currentUser');
+    this.router.navigate(['/login']);
   }
 
 }

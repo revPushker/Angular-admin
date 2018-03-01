@@ -7227,7 +7227,7 @@ table tbody .border-bottom-info td {
   color: #fff;
   display: block;
   font-size: 14px;
-  text-transform: capitalize;
+  /*text-transform: capitalize;*/
 }
 
 .main-menu .main-menu-header .user-details span i {
@@ -26223,3 +26223,11 @@ body.menu-bottom .navbar-wrapper {
 }
 
 /*# sourceMappingURL=style.css.map */
+.error-box { 
+  color: red; 
+  text-align: left; 
+}
+body .input-group {
+    margin-bottom: 5px; 
+    margin-top: 1.25em; 
+}

@@ -29,14 +29,17 @@ import { AlertModule } from 'ngx-alerts';
 import { GetTokenComponent } from './pages/get-token/get-token.component';
 import { FilterPipe } from './customPipes/email-filter.pipe';
 import { CardslistComponent } from './pages/cardslist/cardslist.component';
+import { Ajax } from './ajax';
+import { LoadingModule } from 'ngx-loading';
+ 
 
 
 const appRoutes: Routes = [
    { path: '', redirectTo: '/login', pathMatch: 'full'},
    { path: 'login', component: LoginComponent },
-   { path: 'authenication/forgot', component: ForgetComponent },
-   { path: 'authenication/registration', component: RegistrationComponent },
-   { path: 'dashboard', component: DashboardComponent },
+   { path: 'forgot', component: ForgetComponent },
+   { path: 'registration', component: RegistrationComponent },
+   { path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard] },
 ];
 
 @NgModule({
@@ -72,9 +75,10 @@ const appRoutes: Routes = [
     RouterModule.forChild(DashboardRoutes),
     HttpModule,
     BrowserAnimationsModule,
+    LoadingModule
   ],
   exports: [ScrollModule, FilterPipe],
-  providers: [AuthGuard, MenuItems],
+  providers: [AuthGuard, MenuItems, Ajax],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
