@@ -30,7 +30,7 @@ export class SocialIconsComponent implements OnInit {
     this.submitted = true;
     // console.log(this.myForm);
     if (this.myForm.valid) {
-      alert('ahh laih chakk');
+      //alert('ahh laih chakk');
       console.log(this.myForm.value);
     }
   }

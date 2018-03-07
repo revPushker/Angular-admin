@@ -31,6 +31,9 @@ import { FilterPipe } from './customPipes/email-filter.pipe';
 import { CardslistComponent } from './pages/cardslist/cardslist.component';
 import { Ajax } from './ajax';
 import { LoadingModule } from 'ngx-loading';
+import { ApplicationsComponent } from './pages/applications/applications.component';
+import { ProductComponent } from './pages/product/addproduct/addproduct.component';
+import { ViewproductComponent } from './pages/product/viewproduct/viewproduct.component';
  
 
 
@@ -59,7 +62,10 @@ const appRoutes: Routes = [
     HomeContentComponent,
     GetTokenComponent,
     FilterPipe,
-    CardslistComponent
+    CardslistComponent,
+    ApplicationsComponent,
+    ProductComponent,
+    ViewproductComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +75,8 @@ const appRoutes: Routes = [
     NgbModule.forRoot(),
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: false } // <-- debugging purposes only
+       { useHash: true }
+      //{ enableTracing: false } // <-- debugging purposes only
     ),
     AlertModule.forRoot(),
     RouterModule.forChild(DashboardRoutes),

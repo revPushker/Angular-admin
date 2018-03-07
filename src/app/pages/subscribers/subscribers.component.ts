@@ -19,10 +19,7 @@ export class SubscribersComponent implements OnInit {
 	];
 	public loading = false;
 	constructor(public ajax: Ajax) {
-		this.fetch((data) => {
-			this.rows = data;
-			console.log(this.rows);
-		});
+		
 	}
 	ngOnInit() {
 		this.getSubscriber();
@@ -33,22 +30,15 @@ export class SubscribersComponent implements OnInit {
 		let request = this.ajax.get('subscriber').share();
 		request.map(response => response.json()).subscribe(response => {
 			this.loading = false;
-			this.subscribeUser = response;
+			if(response.length) {
+				this.subscribeUser = response;
+			} else {
+				this.subscribeUser = [];
+			}
 		}, err => {
 			this.loading = false;
 			console.log('Error',err);
 		});
-	}
-
-	fetch(cb) {
-		const req = new XMLHttpRequest();
-		req.open('GET', `assets/data/company.json`);
-
-		req.onload = () => {
-			cb(JSON.parse(req.response));
-		};
-
-		req.send();
 	}
 
 	onSelect({ selected }) {

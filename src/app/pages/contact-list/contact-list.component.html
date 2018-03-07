@@ -3,6 +3,7 @@
     <app-card [title]="'Listing'">
       <div class="dt-responsive">
         <div class="row">
+            <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
           <div class="col-xs-12 col-sm-12 col-sm-12 col-md-6">
             <div>
               <label class="label-control">Show
@@ -51,10 +52,10 @@
           <tbody>
           <tr *ngFor="let item of mf.data">
             <td>{{item.name}}</td>
-            <td>{{item.office}}</td>
-            <td>{{item.age}}</td>
-            <td>{{item.date}}</td>
-            <td>{{item.salary}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.companyname}}</td>
+            <td>{{item.workphone}}</td>
+            <td>{{item.message}}</td>
           </tr>
           </tbody>
           <tfoot>

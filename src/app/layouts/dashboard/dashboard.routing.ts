@@ -12,6 +12,9 @@ import { GivebackComponent } from '../../pages/giveback/giveback.component';
 import { HomeContentComponent } from '../../pages/home-content/home-content.component';
 import { GetTokenComponent } from '../../pages/get-token/get-token.component';
 import { CardslistComponent } from '../../pages/cardslist/cardslist.component';
+import { ApplicationsComponent } from '../../pages/applications/applications.component';
+import { ProductComponent } from '../../pages/product/addproduct/addproduct.component';
+import { ViewproductComponent } from '../../pages/product/viewproduct/viewproduct.component';
 
 export const DashboardRoutes: Route[] = [
   {
@@ -27,6 +30,9 @@ export const DashboardRoutes: Route[] = [
         { path: 'homeContent', component: HomeContentComponent, canActivate: [AuthGuard] },
         { path: 'tokenUsers', component: GetTokenComponent, canActivate: [AuthGuard] },
         { path: 'cardUsers', component: CardslistComponent, canActivate: [AuthGuard]},
+        { path: 'applications', component: ApplicationsComponent, canActivate: [AuthGuard]},
+        { path: 'addProduct', component: ProductComponent, canActivate: [AuthGuard]},
+        { path: 'viewProduct', component: ViewproductComponent, canActivate: [AuthGuard]},
       ]
   }
 ];

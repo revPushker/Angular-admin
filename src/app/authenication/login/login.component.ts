@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
          this.loading = false;
          if(response.length > 0) {
            this.loading = false;
-           this.alertService.success('Succesfully logged in');
+           this.alertService.success('Successfully logged in');
            localStorage.setItem('currentUser', JSON.stringify(response[0]));
            this.router.navigate(['/dashboard']);
          } else {

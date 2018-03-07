@@ -3,6 +3,7 @@
     <app-card [title]="'Card Redeem users'">
       <div class="dt-responsive">
         <div class="row">
+          <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
           <div class="col-xs-12 col-sm-12 col-sm-12 col-md-6">
             <div>
               <label class="label-control">Show
@@ -30,19 +31,37 @@
           <thead>
           <tr>
             <th>
+              <mfDefaultSorter by="name">Name</mfDefaultSorter>
+            </th>
+            <th>
               <mfDefaultSorter by="email">Email</mfDefaultSorter>
             </th>
             <th>
-              <mfDefaultSorter by="ipAddress">Ip Address</mfDefaultSorter>
+              <mfDefaultSorter by="key">Key</mfDefaultSorter>
+            </th>
+            <th>
+              <mfDefaultSorter by="item">Item</mfDefaultSorter>
+            </th>
+            <th>
+              <mfDefaultSorter by="Value">Value</mfDefaultSorter>
+            </th>
+            <th>
+              <mfDefaultSorter by="address">Address</mfDefaultSorter>
+            </th>
+            <th>
+              <mfDefaultSorter by="city">City</mfDefaultSorter>
+            </th>
+            <th>
+              <mfDefaultSorter by="state">State</mfDefaultSorter>
             </th>
             <th>
               <mfDefaultSorter by="country-name">Country Name</mfDefaultSorter>
             </th>
             <th>
-              <mfDefaultSorter by="device">Device Info</mfDefaultSorter>
+              <mfDefaultSorter by="ipAddress">Ip Address</mfDefaultSorter>
             </th>
             <th>
-              <mfDefaultSorter by="terms">Terms Accpeted</mfDefaultSorter>
+              <mfDefaultSorter by="status">Status</mfDefaultSorter>
             </th>
            <!-- <th>
               <mfDefaultSorter>Action</mfDefaultSorter>
@@ -53,11 +72,17 @@
           </thead>
           <tbody>
           <tr *ngFor="let item of mf.data">
+            <td>{{item.name}}</td>
             <td>{{item.email}}</td>
-            <td>{{item.office}}</td>
-            <td>{{item.office}}</td>
-            <td>{{item.phone_no}}</td>
-            <td>{{'yes'}}</td>
+            <td>{{item.key}}</td>
+            <td>{{item.item}}</td>
+            <td>{{item.value}}</td>
+            <td>{{item.address}}</td>
+            <td>{{item.city}}</td>
+            <td>{{item.state}}</td>
+            <td>{{item.country}}</td>
+            <td>{{item.ip}}</td>
+            <td>{{item.status}}</td>
             <!--<td>
             <a href="javascript:;" class="crm-action-delete text-muted text-danger">
             <i class="icofont icofont-delete-alt"></i></a>
@@ -66,15 +91,21 @@
           </tbody>
           <tfoot>
           <tr>
+            <th>Name</th>
             <th>Email</th>
-            <th>Ip Address</th>
-            <th>Country Name</th>
-            <th>Device Info</th>
-            <th>Terms Accpeted</th>
+            <th>Key</th>
+            <th>Item</th>
+            <th>Value</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Country</th>
+            <th>IP Address</th>
+            <th>Status</th>
            <!-- <th>Action</th> -->
           </tr>
           <tr>
-            <td colspan="6">
+            <td colspan="11">
               <mfBootstrapPaginator class="pagination-main f-right"></mfBootstrapPaginator>
             </td>
           </tr>
